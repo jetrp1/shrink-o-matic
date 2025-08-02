@@ -1,0 +1,15 @@
+# Python
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# instance folder
+instance/
+instance/*
