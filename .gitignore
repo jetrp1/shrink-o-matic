@@ -13,3 +13,6 @@ venv/
 # instance folder
 instance/
 instance/*
+
+node_modules/
+node_modules/*
