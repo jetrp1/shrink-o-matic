@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block content %}
+    <h1>Create New Shrink</h1>
+
+    <form action="/shrink" method="POST">
+        <label for="url">Enter URL to shrink:</label>
+        <input type="url" id="url" name="url" required placeholder="https://example.com">
+        <button type="submit">Shrink URL</button>
+    </form>
+{% endblock %}

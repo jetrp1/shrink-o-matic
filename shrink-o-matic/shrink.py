@@ -11,7 +11,7 @@ def index():
     if request.method == 'POST':
         pass
     elif request.method == 'GET':
-        pass
+        return render_template('shrink.html')
 
 
 def gen_shrink_code():

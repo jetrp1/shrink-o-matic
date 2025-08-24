@@ -1,11 +1,78 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h1>Create New Shrink</h1>
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
 
-    <form action="/shrink" method="POST">
-        <label for="url">Enter URL to shrink:</label>
-        <input type="url" id="url" name="url" required placeholder="https://example.com">
-        <button type="submit">Shrink URL</button>
-    </form>
+
+{% block content %}
+
+    <div class="mt-5">
+        <p>Shrink-O-Matic transforms your long, unwieldy URLs into short, concise, memorable links. Perfect for social media sharing, marketing campaigns, or anywhere you need.</p>
+
+        <section class="pt-5">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                    <div class="flex justify-between items-baseline lg:block">
+                        <h3 class="text-lg font-bold">Free Features</h3>
+                        <p class="text-2xl font-bold lg:hidden">$0/mo</p>
+                    </div>
+                    <ul class="flex-grow flex flex-col space-y-2 mt-4">
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-bolt"></i>
+                            <span>Instant URL shortening</span>
+                        </li>
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-calendar-times"></i>
+                            <span>15-day link expiration</span>
+                        </li>
+                    </ul>
+                    <p class="hidden lg:block text-2xl font-bold mt-auto pt-4">$0/mo</p>
+                </a>
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                    <div class="flex justify-between items-baseline lg:block">
+                        <h3 class="text-lg font-bold">Premium Features</h3>
+                        <p class="text-2xl font-bold lg:hidden">$10/mo</p>
+                    </div>
+                    <ul class="flex-grow flex flex-col space-y-2 mt-4">
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Click tracking</span>
+                        </li>
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-edit"></i>
+                            <span>Custom link aliases</span>
+                        </li>
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Custom Link Expiration</span>
+                        </li>
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-code"></i>
+                            <span>API Access</span>
+                        </li>
+                    </ul>
+                    <p class="hidden lg:block text-2xl font-bold mt-auto pt-4">$10/mo</p>
+                </a>
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                    <div class="flex justify-between items-baseline lg:block">
+                        <h3 class="text-lg font-bold">Enterprise Features</h3>
+                        <p class="text-2xl font-bold lg:hidden">Contact Us</p>
+                    </div>
+                    <ul class="flex-grow flex flex-col space-y-2 mt-4">
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Deeper analytics</span>
+                        </li>
+                        <li class="list-group-item flex items-center space-x-2 whitespace-nowrap">
+                            <i class="fas fa-globe"></i>
+                            <span>Custom Domains</span>
+                        </li>
+                    </ul>
+                    <p class="hidden lg:block text-2xl font-bold mt-auto pt-4">Contact Us</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
 {% endblock %}
