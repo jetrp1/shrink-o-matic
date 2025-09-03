@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-10 max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-6">Your Shrink is Ready!</h1>
+    <div class="bg-gray-100 p-6 rounded-lg shadow-inner">
+        <p class="text-lg mb-2">
+            <strong>Original URL:</strong> 
+            <a href="{{ shrink.original_url }}" target="_blank" class="text-blue-600 hover:underline break-all">{{ shrink.original_url }}</a>
+        </p>
+        <p class="text-lg mb-4">
+            <strong>Shrunk URL:</strong> 
+            <a href="{{ shrink.shrunk_url }}" target="_blank" class="text-green-600 hover:underline break-all">{{ shrink.shrunk_url }}</a>
+        </p>
+        <button 
+            onclick="navigator.clipboard.writeText('{{ shrink.shrunk_url }}')"
+            class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+        >
+            Copy to Clipboard
+        </button>
+    </div>
+    <a href="{{ url_for('shrink.index') }}" class="inline-block mt-6 bg-gray-800 text-white font-bold text-lg py-4 px-8 rounded-md hover:bg-black transition-colors">
+        Shrink Another URL
+    </a>
+</div>
+{% endblock %}

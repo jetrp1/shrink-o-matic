@@ -22,8 +22,9 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
-    from . import shrink
-    
+    from . import redirect
+    app.register_blueprint(redirect.bp)
+
     from . import shrink
     app.register_blueprint(shrink.bp) 
 

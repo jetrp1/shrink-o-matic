@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shrink-O-Matic</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
-  <body class="container mx-auto px-4">
+  <body class="bg-white text-black container mx-auto px-4">
   
   {% block header %}
+    {% include 'header.html' %}
   {% endblock %}
       
   {% block content %}
@@ -19,6 +20,7 @@
   {% block footer %}
     {% include 'footer.html' %}
   {% endblock %}
+  
   
   </body>
 </html>

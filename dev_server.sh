@@ -21,7 +21,7 @@ tmux send-keys -t "Flask Server" "flask --app shrink-o-matic run --debug" C-m
 # Tailwind CSS Window
 tmux new-window -t $session_name -n "Tailwind CSS"
 tmux send-keys -t "Tailwind CSS" "cd ~/shrink-o-matic" C-m
-tmux send-keys -t "Tailwind CSS" "npx @tailwindcss/cli -i ./input.css -o ./shrink-o-matic/static/style.css --watch --content \"./shrink-o-matic/templates/**/*.html\"" C-m
+tmux send-keys -t "Tailwind CSS" "npm run build:css -- --watch" C-m
 
 tmux join-pane -h -s "$session_name:Tailwind CSS" -t "$session_name:Flask Server"
 

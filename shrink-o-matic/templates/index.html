@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
 
-{% block header %}
-    {% include 'header.html' %}
-{% endblock %}
-
 
 {% block content %}
 
@@ -12,7 +8,7 @@
 
         <section class="pt-5">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-300 rounded-lg p-6 hover:bg-gray-100 hover:text-black hover:shadow-lg transition-all">
                     <div class="flex justify-between items-baseline lg:block">
                         <h3 class="text-lg font-bold">Free Features</h3>
                         <p class="text-2xl font-bold lg:hidden">$0/mo</p>
@@ -29,7 +25,7 @@
                     </ul>
                     <p class="hidden lg:block text-2xl font-bold mt-auto pt-4">$0/mo</p>
                 </a>
-                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-300 rounded-lg p-6 hover:bg-gray-100 hover:text-black hover:shadow-lg transition-all">
                     <div class="flex justify-between items-baseline lg:block">
                         <h3 class="text-lg font-bold">Premium Features</h3>
                         <p class="text-2xl font-bold lg:hidden">$10/mo</p>
@@ -54,7 +50,7 @@
                     </ul>
                     <p class="hidden lg:block text-2xl font-bold mt-auto pt-4">$10/mo</p>
                 </a>
-                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-700 rounded-lg p-6 hover:bg-gray-200 hover:text-gray-900 hover:shadow-lg transition-all">
+                <a href="{{ url_for('index.index') }}" class="flex flex-col border border-gray-300 rounded-lg p-6 hover:bg-gray-100 hover:text-black hover:shadow-lg transition-all">
                     <div class="flex justify-between items-baseline lg:block">
                         <h3 class="text-lg font-bold">Enterprise Features</h3>
                         <p class="text-2xl font-bold lg:hidden">Contact Us</p>
